@@ -1,0 +1,27 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/shirt" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{shirt._id}}">
+    <div class="form-group">
+        <label>Shirt Brand Name</label>
+        <input type="text" class="form-control" name="shirtName" placeholder="Full Name" value="{{shirt.shirtName}}">
+        <div class="text-danger">
+            {{shirt.shirtNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Color</label>
+        <input type="text" class="form-control" name="shirtColor" placeholder="Color" value="{{shirt.shirtColor}}">
+        <div class="text-danger">
+            {{shirt.shirtColorError}}</div>
+    </div>
+    <div class="form-group">
+            <label>Size</label>
+            <input type="text" class="form-control" name="shirtSize" placeholder="Size" value="{{shirt.shirtSize}}">
+    <div class="text-danger">
+            {{shirt.shirtSizeError}}</div>
+    </div>
+
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/shirt/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

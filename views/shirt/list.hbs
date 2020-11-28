@@ -1,0 +1,24 @@
+<h3><a class="btn btn-secondary" href="/shirt"><i class="fa fa-plus"></i> Create New</a> Shirt List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Shirt Brand Name</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.shirtName}}</td>
+            <td>{{this.shirtColor}}</td>
+            <td>{{this.shirtSize}}</td>
+            <td>
+                <a href="/shirt/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/shirt/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
